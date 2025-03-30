@@ -22,6 +22,9 @@ app.use(
 app.use(express.json());
 
 connectDB();
+app.get("/" ,(req, res) => {
+    res.send("Hello Backend.");
+})
 
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/income", incomeRoutes);
